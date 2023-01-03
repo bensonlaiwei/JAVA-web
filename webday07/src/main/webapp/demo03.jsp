@@ -1,0 +1,26 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+	<% 
+	//request傳直( 轉發)
+	request.setAttribute("msg", "123456");
+	request.getRequestDispatcher("demo05.jsp").forward(request, response);
+	%>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" ></script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>webDay02</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <!-- 全域變數 ，整個專案內的servlet都可以讀取-->
+  <context-param>
+  		<param-name>allVar</param-name>
+  		<param-value>123456</param-value>
+  </context-param>
+  
+  
+  
+  <!-- 註冊servlet01 -->
+  <servlet>
+  	<servlet-name>servlet01</servlet-name>
+  	<servlet-class>tw.com.web.servlet.Servlet01</servlet-class>
+  	<!-- 呼叫初始化參數 ，只在servlet有用-->
+  	<init-param>
+  		<param-name>jdvc</param-name>
+  		<param-value>123456</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>servlet01</servlet-name>
+  	<url-pattern>/s1</url-pattern>
+  </servlet-mapping>
+  
+  
+    <!-- 註冊servlet02 -->
+  <servlet>
+  	<servlet-name>servlet02</servlet-name>
+  	<servlet-class>tw.com.web.servlet.Servlet02</servlet-class>
+  	<!--load-on-startup為啟動順序 -->
+  	<load-on-startup>2</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>servlet02</servlet-name>
+  	<url-pattern>/s2</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <!-- 註冊servlet03 -->
+  <servlet>
+  	<servlet-name>servlet03</servlet-name>
+  	<servlet-class>tw.com.web.servlet.Servlet03</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servlet03</servlet-name>
+  	<url-pattern>/s3</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+   <!-- 註冊servlet04 -->
+  <servlet>
+  	<servlet-name>servlet04</servlet-name>
+  	<servlet-class>tw.com.web.servlet.Servlet04</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servlet04</servlet-name>
+  	<url-pattern>/s4</url-pattern>
+  </servlet-mapping>
+  
+   <!-- 註冊servlet05 -->
+  <servlet>
+  	<servlet-name>servlet05</servlet-name>
+  	<servlet-class>tw.com.web.servlet.Servlet05</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servlet05</servlet-name>
+  	<url-pattern>/s5</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 註冊servlet06 -->
+  <servlet>
+  	<servlet-name>servlet06</servlet-name>
+  	<servlet-class>tw.com.web.servlet.Servlet06</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servlet06</servlet-name>
+  	<url-pattern>/s6</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+</web-app>
